@@ -11,15 +11,15 @@ def get_data_set(filename):
     :return: X, Y
     '''
 
-    dataSet = open(filename, "r")
-    dataSet = dataSet.readlines()
-    num = len(dataSet)
+    data_set = open(filename, "r")
+    data_set = data_set.readlines()
+    num = len(data_set)
 
     X = np.zeros((num, 5))
     Y = np.zeros((num, 1))
 
     for i in range(num):
-        data = dataSet[i].strip().split()
+        data = data_set[i].strip().split()
         X[i, 0] = 1.0
         X[i, 1] = np.float(data[0])
         X[i, 2] = np.float(data[1])
